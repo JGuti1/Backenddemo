@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Eventos</title>
+    <link rel="stylesheet" href="styles/styleCRUD.css">
+</head>
+<body>
+    <h1>Gestión de Eventos</h1>
+
+    <!-- Formulario para agregar/editar eventos -->
+    <div class="form-container">
+        <input type="hidden" id="evento-id">
+        <input type="hidden" id="usuario-id" value="1"> <!-- Asume que el usuario está autenticado y su ID es 1 -->
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="lugar" placeholder="Lugar">
+        <input type="date" id="fecha" placeholder="Fecha">
+        <textarea id="descripcion" placeholder="Descripción"></textarea>
+        <button class="guardar" onclick="guardarEvento()">Guardar Evento</button>
+    </div>
+
+    <!-- Tabla de eventos -->
+    <table id="eventos-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Nombre</th>
+                <th>Lugar</th>
+                <th>Fecha</th>
+                <th>Descripción</th>
+                <th>Fecha de Creación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se añadirán los eventos -->
+        </tbody>
+    </table>
+
+    <script src="js/eventos.js"></script>
+</body>
+</html>
